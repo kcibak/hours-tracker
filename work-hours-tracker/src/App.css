@@ -1,0 +1,152 @@
+:root {
+  --bg: #eaf4ff;
+  --bg-card: #ffffff;
+  --text: #0f2a43;
+  --muted: #5b7a99;
+  --primary: #3a86ff;
+  --primary-600: #2b6fd1;
+  --outline: #b9d6ff;
+  --danger: #d72638;
+}
+
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px;
+  color: var(--text);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.header h1 {
+  margin: 0 0 4px 0;
+  font-size: 1.5rem;
+}
+
+.sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--outline);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(58, 134, 255, 0.08);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.row-invalid .time-input {
+  border-color: var(--danger);
+}
+
+.error {
+  grid-column: 1 / -1;
+  font-size: 0.85rem;
+  color: var(--danger);
+}
+
+.time-input {
+  appearance: none;
+  background: #f6fbff;
+  border: 1px solid var(--outline);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.time-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.time-input.hour { width: 72px; }
+.time-input.minute { width: 80px; }
+
+.btn.ampm {
+  background: #eef6ff;
+  border: 1px solid var(--outline);
+  color: var(--text);
+  padding: 6px 10px;
+}
+
+.dash {
+  color: var(--muted);
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary-600);
+  color: white;
+}
+.btn-primary:hover { background: var(--primary-600); }
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--outline);
+  color: var(--text);
+}
+.btn-outline:hover { background: #f0f7ff; }
+
+.btn-ghost {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  padding: 6px 8px;
+}
+.btn-ghost:hover { color: var(--text); }
+
+.total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--outline);
+}
+.total-label { color: var(--muted); }
+.total-value {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-size: 1.6rem;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 18px;
+}
